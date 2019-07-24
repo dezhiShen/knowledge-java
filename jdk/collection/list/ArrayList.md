@@ -1,14 +1,12 @@
-[githubUrl]:https://github.com/knowledge-java/master
-[imgUrl]:https://raw.githubusercontent.com/dezhiShen/knowledge-java/master/assets/img
-
 # ArrayList
+
 ## 底层
 
 底层由数组实现
 
 ## 方法
 
-    ![ArrayList](https://raw.githubusercontent.com/dezhiShen/knowledge-java/master/assets/img/ArrayList.png)
+![ArrayList](../../../assets/img/ArrayList.png)
 
  * 内部方法:
     * `ensureCapacityInternal`,确保内部容量,由于底层使用数组实现,
