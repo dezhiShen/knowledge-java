@@ -1,6 +1,7 @@
 {
   "plugins":[
     "expandable-chapters",
+    "gitbook-plugin-summary",
     "splitter"
   ]
 }
