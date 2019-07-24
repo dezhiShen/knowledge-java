@@ -3,6 +3,7 @@
     "toggle-chapters",
     "favicon"
   ],
+  "language":"zh-hans",
   "pluginsConfig": {
     "favicon": {
       "shortcut": "https://github.githubassets.com/favicon.ico"
