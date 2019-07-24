@@ -1,7 +1,12 @@
 {
   "plugins": [
     "toggle-chapters",
-    "favicon"
+    "favicon",
+    "-sharing",
+    "back-to-top-button",
+    "code",
+    "todo",
+    "splitter"
   ],
   "language":"zh-hans",
   "pluginsConfig": {
