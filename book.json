@@ -1,5 +1,11 @@
 {
-  "plugins":[
-    "toggle-chapters"
-  ]
+  "plugins": [
+    "toggle-chapters",
+    "favicon"
+  ],
+  "pluginsConfig": {
+    "favicon": {
+      "shortcut": "https://github.githubassets.com/favicon.ico",
+    }
+  }
 }
