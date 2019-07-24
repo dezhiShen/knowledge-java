@@ -1,6 +1,8 @@
 {
   "plugins":[
     "expandable-chapters",
-    "splitter"
+    "splitter",
+    "toc",
+    "summary"
   ]
 }
