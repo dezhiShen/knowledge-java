@@ -3,7 +3,7 @@
 底层由数组实现
 
 ## 方法
-    ![](../../../assets/ArrayList.png)
+    ![](/assets/ArrayList.png)
  * 内部方法:
     * `ensureCapacityInternal`,确保内部容量,由于底层使用数组实现,
     数组是固定长度,当发生add方法时,需要确认数组长度足够
