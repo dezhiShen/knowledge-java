@@ -1,9 +1,4 @@
-
-[projectName]:knowledge-java
-[branch]:master
-[githubUrl]:https://github.com/[projectName]/[branch]
-# ArrayList
-
+#ArrayList
 ## 底层
 
 底层由数组实现
