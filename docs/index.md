@@ -1,6 +1,4 @@
-#主页
-____________________
-##jdk
-_________________
+###主页
+###jdk
 ### collection
 * [ArrayList](../jdk/collection/list/ArrayList.md)
