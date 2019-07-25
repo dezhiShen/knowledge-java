@@ -201,6 +201,8 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 计算hash为`4^(4>>>16)`为4,
 数组下标为 `(2 - 1) & 4`
 
+`&`见[位移运算符](../../运算符.md#逻辑运算符)
+
 表达式|二进制|十进制
 ---|---|---
 4           |0000 0110| 4
