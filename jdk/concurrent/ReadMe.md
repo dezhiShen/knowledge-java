@@ -14,7 +14,9 @@ java.util.concurrent包提供了创建并发应用程序的工具
 * [ThreadFactory](ThreadFactory.md)
 * [BlockingQueue](BlockingQueue.md)
 * [DelayQueue](DelayQueue.md)
-* [Locks](Locks.md)
+* [Lock](Lock.md)
 * [Phaser](Phaser.md)
+
+
 
 
