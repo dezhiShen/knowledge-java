@@ -62,7 +62,8 @@ FileInputStream FileOutputStream FileReader FileWriter
     使用了某种编码，人可以阅读）。
     简而言之，字节是个计算机看的，字符才是给人看的。
     ```
-!\[\](../../assets/img/ioStream.png)
+    
+![](../../assets/img/ioStream.png)
 
 ## io接口类说明
 
