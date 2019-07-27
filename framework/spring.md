@@ -88,6 +88,30 @@ public interface BeanFactory {
 由于BeanFactory的功能不够强大，因此Spring在BeanFactory的基础上，设计了一个更为高级的接口ApplicationContext，它是BeanFactory的子接口之一，在Spring的体系中，BeanFactory和ApplicationContext是最为重要的接口设计，在现实中我们使用的大部分Spring IoC容器是ApplicationContext接口的实现类。
 
 
+#### bean生命周期
+
+
+
+* 初始化示意图
+
+![](../assets/img/spring_bean_init.png)
+
+* 初始化步骤说明
+    * spring通过我们的配置，如@ComponentScan定义的扫描路径去找到带有@Component的类，这个过程就是一个资源定位的过程
+    * 一旦找到资源，那么它就开始解析，并将定义的信息保存起来，注意，此时还没有初始化bean，也就没有bean的实例，它有的仅仅是bean的定义。
+    * 然后就会把bean定义发布到Spring IoC容器中。此时，IoC容器也只有bean的定义，还是没有bean的实例生成。
+    
+* 生命周期示意图
+
+![](../assets/img/spring_bean.png)
+
+
+* 完整版
+
+![](../assets/img/spring_bean_finally.png)
+
+
+    
 
         
 
