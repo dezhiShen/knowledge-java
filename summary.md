@@ -35,3 +35,7 @@
 
 ### sql
 * [Mysql](中间件/sql/Mysql.md)
+
+## jvm
+* [内存模型](jvm/内存模型.md)
+* [垃圾回收](jvm/GC.md)
