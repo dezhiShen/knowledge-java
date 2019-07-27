@@ -111,17 +111,6 @@ public interface BeanFactory {
 ![](../assets/img/spring_bean_finally.png)
 
 
-    
-
-        
-
-
-
-
-
-
-
-
 ## AOP
 
 
