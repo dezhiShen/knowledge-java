@@ -15,7 +15,16 @@ public interface ServiceHi {
 
 `@FeignClient` 配置服务名,使用`@RequestMapping`配置远程方法
 
-## 内部实现
+## Hystrix
+`feign.hystrix.enabled=true`打开断路由
+* fallback
+
+在`@FeignClient`中属性`fallback`填写当前类的实现,每个方法可以写自己的fallback
+
+* fallbackFactory
+
+可以对fallback进行统一处理,实现接口`FallbackFactory`
+
 
 
 
