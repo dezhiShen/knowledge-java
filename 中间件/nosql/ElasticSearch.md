@@ -96,7 +96,8 @@ Elasticsearch 是通过 Lucene 的倒排索引技术实现比关系型数据库�
 
 ## Shard(分片)
 
-一个Shard就是一个Lucene实例,是一个完整的搜索引擎.一个索引可以只包含一个Shard,只是一般情况下会用多个分片,可以拆分索引到不同的节点上,分担索引压力.
+一个Shard就是一个Lucene实例,是一个完整的搜索引擎.一个索引可以只包含一个Shard,
+只是一般情况下会用多个分片,可以拆分索引到不同的节点上,分担索引压力.
 
 
 
@@ -117,7 +118,42 @@ Elasticsearch 是通过 Lucene 的倒排索引技术实现比关系型数据库�
 
 
 
+## ElasticSearch 的数据实时性
+### 问题
+ 一个Index由若干段`Segment`组成,搜索的时候按段搜索,
+我们索引一条段后，
+每个段会通过fsync 操作持久化到磁盘，而fsync 操作比较耗时,
+如果每索引一条数据都做这个full commit(rsync)操作,
+提交和查询的时延都非常之大,
+所以在这种情况下做不到实时的一个搜索。
+### 方案
+针对这个问题的解决是在Elasticsearch和磁盘之间引入一层称为FileSystem Cache的系统缓存，
+正是由于这层cache的存在才使得es能够拥有更快搜索响应能力。
+### 写入流程
+写入流程改进如下：
+1. 数据写入buffer
+2. 每隔一定时间，buffer中的数据被写入segment文件，但是先写入os cache(FileSystem Cache)
+3. 只要segment写入os cache，那就直接打开供search使用，不立即执行commit
+* 可以手动_refresh
+`POST /my_index/_refresh`
+
+* 可以通过setting 修改时效性
+```
+PUT /my_index
+{
+  "settings": {
+    "refresh_interval": "30s" 
+  }
+}
+```
+
+
+
     
+
+
+
+
     
     
 
